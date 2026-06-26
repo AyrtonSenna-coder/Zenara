@@ -410,231 +410,227 @@ function Nav() {
 /* ── HERO ───────────────────────────────────────────────────── */
 function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center overflow-hidden pt-20 pb-16 px-6 lg:px-8" 
-             style={{ 
-               background: "linear-gradient(to bottom, #06070D 0%, #111827 100%)",
-             }}>
-      {/* Background enhancements */}
-      <div className="absolute inset-0 opacity-[0.035]" 
-           style={{ 
-             backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 1px, transparent 0)", 
-             backgroundSize: "48px 48px" 
-           }} />
-      <div className="absolute top-[-20%] right-[10%] w-[700px] h-[700px] rounded-full blur-[140px]" 
-           style={{ background: "rgba(59,130,246,0.18)" }} />
-      <div className="absolute bottom-[10%] left-[5%] w-[500px] h-[500px] rounded-full blur-[120px]" 
-           style={{ background: "rgba(0,208,132,0.12)" }} />
+    <section className="relative min-h-screen flex items-center overflow-hidden px-8 pt-24 pb-16">
+      {/* Background layers */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(135deg, #0B0F19 0%, #1a0f3a 50%, #0B0F19 100%)" }} />
+      <div className="absolute top-[-15%] right-[5%] w-[600px] h-[600px] rounded-full blur-[120px]" style={{ background: "rgba(124,58,237,0.2)" }} />
+      <div className="absolute bottom-[5%] left-[5%] w-[400px] h-[400px] rounded-full blur-[100px]" style={{ background: "rgba(0,208,132,0.1)" }} />
+      <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
 
-      <div className="relative max-w-[1280px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        {/* LEFT COLUMN - Content */}
+      <div className="relative max-w-[1280px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        {/* Left: text — cols 1-7 */}
         <div className="lg:col-span-7">
-          {/* Premium Badge */}
+          {/* Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2.5 rounded-full px-5 py-2 mb-8 border border-[rgba(0,208,132,0.3)]"
-            style={{ background: "rgba(0,208,132,0.08)" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-8"
+            style={{ background: "rgba(0,208,132,0.1)", border: "1px solid rgba(0,208,132,0.3)" }}
           >
-            <Pulse size={7} color={C.emerald} />
-            <span className="text-sm font-semibold tracking-[0.08em] uppercase" 
-                  style={{ color: C.emerald, fontFamily: F_EDITORIAL }}>
-              Revenue Engineering. Always On.
+            <Pulse size={6} />
+            <span className="text-xs font-semibold tracking-[0.12em] uppercase" style={{ color: C.emerald, fontFamily: F_EDITORIAL }}>
+              Digital Agency — Est. 2024
             </span>
           </motion.div>
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="font-bold leading-[1.05] tracking-[-0.04em] mb-6"
-            style={{ 
-              fontFamily: F_DISPLAY, 
-              fontSize: "clamp(56px, 7.5vw, 92px)", 
-              color: C.white 
-            }}
+            transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="font-bold leading-[1.02] tracking-[-0.04em]"
+            style={{ fontFamily: F_DISPLAY, fontSize: "clamp(52px, 7vw, 88px)", color: C.white }}
           >
-            Engineering Revenue<br />That Moves at Speed
+            We Build Digital
+            <br />
+            Experiences That{" "}
+            <span
+              className="relative"
+              style={{ background: "linear-gradient(135deg, #3B82F6 0%, #7C3AED 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+            >
+              Convert
+            </span>
           </motion.h1>
 
-          {/* Subheadline */}
+          {/* Sub */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-xl lg:text-2xl leading-tight max-w-[620px] mb-4"
+            transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-6 text-lg leading-[1.75] max-w-[480px]"
             style={{ color: C.ivory, fontFamily: F_BODY }}
           >
-            Fast, precise digital systems for Kenyan businesses. M-Pesa integrations, high-converting e-commerce, and powerful platforms for churches &amp; communities. From idea to revenue in 72 hours.
-          </motion.p>
-
-          {/* Supporting Line */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.25 }}
-            className="text-lg mb-10"
-            style={{ color: C.mist, fontFamily: F_EDITORIAL }}
-          >
-            Mombasa-based. Results-obsessed. Built for the Kenyan market.
+            From cinematic brand identities to revenue-driving web systems — we partner with ambitious companies to build digital products that don't just look good, they perform.
           </motion.p>
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="flex flex-wrap gap-4"
+            transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-10 flex flex-wrap gap-4"
           >
             <a
               href="https://wa.me/254795451238"
-              className="group inline-flex items-center gap-3 font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.985]"
-              style={{ 
-                background: "#3B82F6", 
-                color: "#FFFFFF", 
-                boxShadow: "0 10px 30px -10px rgba(59,130,246,0.5)" 
-              }}
+              className="group inline-flex items-center gap-2 font-bold text-base px-8 py-4 rounded-full transition-all duration-200"
+              style={{ background: C.emerald, color: C.void, fontFamily: F_EDITORIAL, boxShadow: "0 0 40px rgba(0,208,132,0.2), 0 0 80px rgba(0,208,132,0.08)" }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#00F09A"; (e.currentTarget as HTMLElement).style.transform = "scale(1.02) translateY(-2px)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = C.emerald; (e.currentTarget as HTMLElement).style.transform = "scale(1) translateY(0)"; }}
             >
-              Start Your Project
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              Book a Free Strategy Call
+              <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-
             <a
               href="#portfolio"
-              className="inline-flex items-center gap-3 font-semibold text-lg px-8 py-5 rounded-2xl border border-white/30 hover:border-white/50 transition-all duration-200"
-              style={{ color: C.white }}
+              className="inline-flex items-center gap-2 font-medium text-base px-8 py-4 rounded-full transition-all duration-200"
+              style={{ border: "1px solid rgba(255,255,255,0.2)", color: C.white, fontFamily: F_EDITORIAL }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.4)"; (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.background = "transparent"; }}
             >
-              See Our Work
-              <ArrowUpRight size={18} />
+              <Play size={14} fill="currentColor" />
+              View Our Work
             </a>
           </motion.div>
 
-          {/* Trust Bar */}
+          {/* Social proof */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-12 flex items-center gap-8 text-sm"
-            style={{ color: C.mist, fontFamily: F_EDITORIAL }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-10 flex items-center gap-4 flex-wrap"
           >
-            <div className="flex items-center gap-2">
-              <Check size={18} style={{ color: C.emerald }} />
-              <span>Trusted by growing businesses across the Coast</span>
+            {/* Avatar cluster */}
+            <div className="flex -space-x-2.5">
+              {[
+                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&auto=format",
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&auto=format",
+                "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&auto=format",
+                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=48&h=48&fit=crop&auto=format",
+                "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&auto=format",
+                "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=48&h=48&fit=crop&auto=format",
+              ].map((src, i) => (
+                <img key={i} src={src} alt="Client" className="w-9 h-9 rounded-full border-2 object-cover" style={{ borderColor: C.void }} />
+              ))}
             </div>
-            <div className="hidden md:block w-px h-4 bg-white/20" />
-            <div>10+ projects delivered</div>
-            <div className="hidden md:block w-px h-4 bg-white/20" />
-            <div className="font-medium text-emerald-400">72-hour kickoff guarantee</div>
+            <div>
+              <div className="flex items-center gap-1 mb-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={12} fill={C.emerald} style={{ color: C.emerald }} />
+                ))}
+                <span className="text-xs font-semibold ml-1" style={{ color: C.white, fontFamily: F_EDITORIAL }}>4.9/5</span>
+              </div>
+              <p className="text-xs" style={{ color: C.mist, fontFamily: F_BODY }}>
+                Trusted by 10+ companies across East Africa and beyond
+              </p>
+            </div>
           </motion.div>
         </div>
 
-        {/* RIGHT COLUMN - Product Visual */}
-        <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[520px]">
-            {/* Main Dashboard Mockup */}
-            <motion.div
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="relative bg-[#0F1625] rounded-3xl overflow-hidden shadow-2xl border border-white/10"
-            >
-              {/* Dashboard Header */}
-              <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#0A0F1C]">
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 rounded-xl bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center">
-                    <Zap size={15} className="text-white" />
-                  </div>
-                  <span className="font-semibold text-white">Zenara Revenue OS</span>
-                </div>
-                <div className="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400">LIVE</div>
-              </div>
+        {/* Right: Device mockup — cols 8-12 */}
+        <div className="lg:col-span-5 relative flex justify-center items-center">
+          {/* Glow behind device */}
+          <div className="absolute inset-0 rounded-[32px] blur-[60px]" style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.15), rgba(124,58,237,0.15))" }} />
 
-              {/* Dashboard Content */}
-              <div className="p-6 space-y-6">
-                {/* Revenue Chart */}
+          {/* Browser mockup */}
+          <motion.div
+            initial={{ opacity: 0, y: 32, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.6)]"
+            style={{ border: "1px solid rgba(255,255,255,0.1)" }}
+          >
+            {/* Browser chrome */}
+            <div className="px-4 py-3 flex items-center gap-2" style={{ background: C.slate }}>
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full" style={{ background: C.rose }} />
+                <div className="w-3 h-3 rounded-full" style={{ background: "#F59E0B" }} />
+                <div className="w-3 h-3 rounded-full" style={{ background: C.emerald }} />
+              </div>
+              <div className="flex-1 mx-4 h-6 rounded-md flex items-center px-3" style={{ background: C.charcoal }}>
+                <span className="text-[10px]" style={{ color: C.mist, fontFamily: F_MONO }}>lumina.finance</span>
+              </div>
+            </div>
+            {/* Screenshot */}
+            <div className="relative" style={{ background: C.navy }}>
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=640&fit=crop&auto=format"
+                alt="Lumina Finance dashboard"
+                className="w-full object-cover"
+                style={{ height: 280 }}
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(17,24,39,0.6) 0%, transparent 60%)" }} />
+            </div>
+          </motion.div>
+
+          {/* Floating card A — notification */}
+          <motion.div
+            className="absolute top-[6%] right-[-8%] hidden lg:block"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.9, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
+              <div className={cn(glassmorphism, "rounded-2xl px-4 py-3 flex items-center gap-3 w-52")}>
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 relative" style={{ background: "rgba(0,208,132,0.15)" }}>
+                  <Users size={14} style={{ color: C.emerald }} />
+                  <span className="absolute -top-0.5 -right-0.5"><Pulse size={4} /></span>
+                </div>
                 <div>
-                  <div className="flex justify-between text-xs mb-3" style={{ color: C.mist }}>
-                    <span>Revenue Today</span>
-                    <span className="text-emerald-400 font-medium">+KSh 284,920</span>
-                  </div>
-                  <div className="h-48 bg-[#111827] rounded-2xl relative overflow-hidden">
-                    {/* Fake animated bars */}
-                    <div className="absolute bottom-0 left-6 right-6 h-40 flex items-end gap-2">
-                      {[65, 82, 45, 91, 73, 88, 67].map((h, i) => (
-                        <motion.div
-                          key={i}
-                          className="bg-gradient-to-t from-emerald-500 to-blue-500 rounded-t w-full"
-                          initial={{ height: 0 }}
-                          animate={{ height: `${h}%` }}
-                          transition={{ delay: 0.6 + i * 0.08 }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* M-Pesa Transaction */}
-                <div className="bg-[#1A2338] rounded-2xl p-5 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
-                    <Check size={28} style={{ color: C.emerald }} />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium">M-Pesa Payment Received</p>
-                    <p className="text-emerald-400 font-mono text-lg">KSh 47,250</p>
-                  </div>
-                  <div className="text-right text-xs text-emerald-400">
-                    Just now<br />✓ Confirmed
-                  </div>
+                  <p className="text-xs font-semibold" style={{ color: C.white, fontFamily: F_EDITORIAL }}>New Lead Captured</p>
+                  <p className="text-[10px] mt-0.5" style={{ color: C.mist, fontFamily: F_BODY }}>Equity Bank · just now</p>
                 </div>
               </div>
             </motion.div>
+          </motion.div>
 
-            {/* Floating KPI Cards */}
-            <motion.div
-              className="absolute -top-6 -right-6 hidden lg:block"
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-            >
-              <div className={cn(glassmorphism, "rounded-2xl px-6 py-4 w-52")}>
-                <div className="text-xs tracking-widest uppercase mb-1" style={{ color: C.mist }}>MONTHLY RECURRING</div>
-                <div className="text-3xl font-bold text-white font-mono">KSh 2.84M</div>
-                <div className="text-emerald-400 text-sm flex items-center gap-1 mt-1">
-                  <TrendingUp size={14} /> +18.4%
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute -bottom-8 -left-8 hidden lg:block"
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 5, repeat: Infinity, delay: 1.2 }}
-            >
+          {/* Floating card B — ROI stat */}
+          <motion.div
+            className="absolute bottom-[8%] left-[-12%] hidden lg:block"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}>
               <div className={cn(glassmorphism, "rounded-2xl px-5 py-4 w-44")}>
-                <div className="flex items-center gap-3">
-                  <div className="text-emerald-400">
-                    <Users size={22} />
-                  </div>
-                  <div>
-                    <div className="text-xs text-white">Active Projects</div>
-                    <div className="text-2xl font-bold text-white">17</div>
-                  </div>
+                <p className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-1" style={{ color: C.mist, fontFamily: F_EDITORIAL }}>ROI</p>
+                <p className="text-3xl font-bold" style={{ color: C.white, fontFamily: F_MONO }}>+340%</p>
+                <div className="mt-2 flex items-center gap-1">
+                  <TrendingUp size={10} style={{ color: C.emerald }} />
+                  <span className="text-[10px]" style={{ color: C.emerald, fontFamily: F_BODY }}>vs. prior campaign</span>
                 </div>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
+
+          {/* Floating card C — Project Live */}
+          <motion.div
+            className="absolute top-[45%] right-[-14%] hidden lg:block"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.3, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 2 }}>
+              <div className={cn(glassmorphism, "rounded-2xl px-4 py-3 flex items-center gap-3")}>
+                <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ background: "rgba(0,208,132,0.15)" }}>
+                  <Check size={12} style={{ color: C.emerald }} />
+                </div>
+                <span className="text-xs font-semibold" style={{ color: C.white, fontFamily: F_EDITORIAL }}>Project Live 🚀</span>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-          <ChevronDown size={20} style={{ color: "rgba(255,255,255,0.4)" }} />
+        <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+          <ChevronDown size={18} style={{ color: "rgba(255,255,255,0.3)" }} />
         </motion.div>
       </motion.div>
     </section>
