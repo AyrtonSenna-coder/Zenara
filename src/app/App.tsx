@@ -1311,7 +1311,7 @@ function Footer() {
             </p>
             {/* Socials */}
             <div className="flex gap-2.5 mb-6">
-              {["Li", "https://instagram.com/luminakwa.digital?igsh=MXNpa2YxOTZhajRueQ==", "X", "Be", "Dr"].map((s) => (
+              {["Li", "IG", "X", "Be", "Dr"].map((s) => (
                 <a key={s} href="#" className="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold transition-all duration-200" style={{ border: "1px solid rgba(255,255,255,0.1)", color: C.mist }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = C.emerald; (e.currentTarget as HTMLElement).style.color = C.void; (e.currentTarget as HTMLElement).style.borderColor = C.emerald; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; (e.currentTarget as HTMLElement).style.color = C.mist; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)"; }}
