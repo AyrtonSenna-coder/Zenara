@@ -95,7 +95,7 @@ const STATS = [
   { value: "10+", label: "Projects Delivered", raw: 10, suffix: "+" },
   { value: "85%", label: "Client Satisfaction Rate", raw: 85, suffix: "%" },
   { value: "KSh 100K+", label: "Revenue Generated for Clients", raw: 100, suffix: "K+" },
-  { value: "2 yrs", label: "Combined Team Experience", raw: 5, suffix: " yrs" },
+  { value: "2 yrs", label: "Combined Team Experience", raw: 2, suffix: " yrs" },
 ];
 
 const PORTFOLIO_FEATURED = {
@@ -203,7 +203,7 @@ const FAQS = [
   { q: "What happens after the project launches?", a: "Every project includes a 30-day post-launch support window at no extra cost. After that, clients typically move onto a maintenance retainer or a growth-focused paid media or SEO engagement." },
 ];
 
-const CLIENT_LOGOS = ["Safaricom", "NCBA Bank", "Jumia", "Equity Bank", "Kenya Airways", "Twiga Foods", "Cellulant", "M-KOPA", "Copia Global", "Poa Internet"];
+const CLIENT_LOGOS = ["Autosphere Kenya", "NCBA Bank", "Greenify", "Lumina Finance", "Twiga Foods", "Cellulant", "M-KOPA", "Copia Global", "Poa Internet"];
 
 /* ── Helpers ────────────────────────────────────────────────── */
 function cn(...cls: (string | false | null | undefined)[]) {
@@ -518,7 +518,7 @@ function Hero() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={12} fill={C.emerald} style={{ color: C.emerald }} />
                 ))}
-                <span className="text-xs font-semibold ml-1" style={{ color: C.white, fontFamily: F_EDITORIAL }}>4.9/5</span>
+                <span className="text-xs font-semibold ml-1" style={{ color: C.white, fontFamily: F_EDITORIAL }}>4.0/5</span>
               </div>
               <p className="text-xs" style={{ color: C.mist, fontFamily: F_BODY }}>
                 Trusted by 10+ companies across East Africa and beyond
@@ -578,7 +578,7 @@ function Hero() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold" style={{ color: C.white, fontFamily: F_EDITORIAL }}>New Lead Captured</p>
-                  <p className="text-[10px] mt-0.5" style={{ color: C.mist, fontFamily: F_BODY }}>Equity Bank · just now</p>
+                  <p className="text-[10px] mt-0.5" style={{ color: C.mist, fontFamily: F_BODY }}>Lumina Finance · just now</p>
                 </div>
               </div>
             </motion.div>
@@ -594,7 +594,7 @@ function Hero() {
             <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}>
               <div className={cn(glassmorphism, "rounded-2xl px-5 py-4 w-44")}>
                 <p className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-1" style={{ color: C.mist, fontFamily: F_EDITORIAL }}>ROI</p>
-                <p className="text-3xl font-bold" style={{ color: C.white, fontFamily: F_MONO }}>+340%</p>
+                <p className="text-3xl font-bold" style={{ color: C.white, fontFamily: F_MONO }}>+150%</p>
                 <div className="mt-2 flex items-center gap-1">
                   <TrendingUp size={10} style={{ color: C.emerald }} />
                   <span className="text-[10px]" style={{ color: C.emerald, fontFamily: F_BODY }}>vs. prior campaign</span>
